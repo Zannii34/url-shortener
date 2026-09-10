@@ -3,7 +3,7 @@
 A Flask-based URL shortener with click analytics - built to understand how services like Bitly work under the hood.
 
 ## Live Demo
-_Coming soon - deploying to Render_
+[**Live Demo -> https://url-shortener-jh9y.onrender.com/**](https://url-shortener-jh9y.onrender.com/)
 
 ## Features
 
