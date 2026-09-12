@@ -9,20 +9,24 @@
 {% block head %}{% endblock %}
 </head>
 <body>
-<header class="site-header">
-<a href="{{ url_for('index') }}" class="brand">🔗 ShortLink</a>
-<nav>
-<a href="{{ url_for('index') }}">Shorten</a>
-<a href="{{ url_for('dashboard') }}">Dashboard</a>
-</nav>
+<header class="site-header-shortener">
+  <a href="{{ url_for('index') }}" class="brand" style="text-decoration:none;display:flex;align-items:center;gap:0.75rem;color:inherit;">
+    <span class="wk-badge">WK</span>
+    <span style="font-family: 'Space Grotesk', sans-serif;font-weight:700;font-size:1.05rem;">ShortLink</span>
+  </a>
+  <nav class="main-nav">
+    <a href="{{ url_for('index') }}">Shorten</a>
+    <a href="{{ url_for('dashboard') }}">Dashboard</a>
+  </nav>
 </header>
-<main class="container">
+<main class="container-shortener">
 {% block content %}{% endblock %}
 </main>
-<footer class="site-footer">
-<p>Built with Flask &amp; SQLAlchemy &middot; {{ now if now else '' }}</p>
+<footer class="wk-footer">
+  <span class="wk-badge">WK</span>
+  Built by <a href="https://zannii34.github.io" target="_blank" rel="noopener">Wayne Kamachetera</a>
+  · <a href="https://github.com/Zannii34/url-shortener" target="_blank" rel="noopener">GitHub</a>
 </footer>
 <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </body>
 </html>
-
