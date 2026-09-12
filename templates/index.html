@@ -1,8 +1,30 @@
-﻿{% extends "base.html" %}
-{% block title %}Shorten a URL{% endblock %}
+{% extends "base.html" %}
+{% block title %}Shorten a URL{% if recent %}
+<section class="recent-links">
+  <h2>Recently shortened</h2>
+  <table>
+    <thead><tr><th>Short</th><th>Original</th><th>Clicks</th></tr></thead>
+    <tbody>
+    {% for link in recent %}
+    <tr>
+      <td><a href="/{{ link.short_code }}" target="_blank">/{{ link.short_code }}</a></td>
+      <td class="url-cell">{{ link.original_url[:50] }}{% if link.original_url|length > 50 %}...{% endif %}</td>
+      <td>{{ link.click_count or 0 }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endif %}
+{% endblock %}
 {% block content %}
 <h1>Shorten a URL</h1>
 <p class="lead">Paste a long URL and get a short one you can share anywhere.</p>
+<div class="hero-stats">
+  <div class="hs-item"><strong>{{ total_links or 0 }}</strong><span>Links shortened</span></div>
+  <div class="hs-item"><strong>{{ total_clicks or 0 }}</strong><span>Clicks tracked</span></div>
+  <div class="hs-item"><strong>99.9%</strong><span>Uptime</span></div>
+</div>
 
 <form method="POST" class="shorten-form">
 <input type="text" name="url" placeholder="https://example.com/very/long/url" required autofocus>
@@ -23,4 +45,21 @@
 {% endif %}
 
 <p class="nav-link"><a href="{{ url_for('dashboard') }}">View Dashboard →</a></p>
+{% if recent %}
+<section class="recent-links">
+  <h2>Recently shortened</h2>
+  <table>
+    <thead><tr><th>Short</th><th>Original</th><th>Clicks</th></tr></thead>
+    <tbody>
+    {% for link in recent %}
+    <tr>
+      <td><a href="/{{ link.short_code }}" target="_blank">/{{ link.short_code }}</a></td>
+      <td class="url-cell">{{ link.original_url[:50] }}{% if link.original_url|length > 50 %}...{% endif %}</td>
+      <td>{{ link.click_count or 0 }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endif %}
 {% endblock %}

@@ -591,3 +591,23 @@ tbody tr:last-child td {
   border: 2px solid var(--bg);
 }
 ::-webkit-scrollbar-thumb:hover { background: var(--muted-2); }
+
+/* Hero stats */
+.hero-stats {
+  display: flex; gap: 2rem; justify-content: center;
+  padding: 1.5rem 0; margin: 1.5rem 0;
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.hs-item { text-align: center; }
+.hs-item strong {
+  display: block; font-size: 1.75rem; font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif; color: var(--blue);
+  letter-spacing: -0.02em;
+}
+.hs-item span { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+@media (max-width: 600px) { .hero-stats { flex-direction: column; gap: 1rem; } }
+
+/* Recent links */
+.recent-links { margin-top: 2rem; }
+.recent-links h2 { font-size: 1rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; }
+.url-cell { color: var(--muted); font-size: 0.85rem; }
