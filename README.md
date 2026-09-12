@@ -1,6 +1,12 @@
-﻿# URL Shortener with Analytics
+# URL Shortener with Analytics
 
 A Flask-based URL shortener with click analytics - built to understand how services like Bitly work under the hood.
+
+## Screenshots
+
+![Homepage](docs/screenshot-home.png)
+
+![Feature](docs/screenshot-feature.png)
 
 ## Live Demo
 [**Live Demo -> https://url-shortener-jh9y.onrender.com/**](https://url-shortener-jh9y.onrender.com/)
@@ -8,6 +14,12 @@ A Flask-based URL shortener with click analytics - built to understand how servi
 ## Features
 
 - Create short links from long URLs
+
+## Screenshots
+
+![Homepage](docs/screenshot-home.png)
+
+![Feature](docs/screenshot-feature.png)
 - Redirect short links to originals
 - Track every click (timestamp, referrer, user agent)
 - REST API for programmatic link creation
@@ -18,6 +30,12 @@ A Flask-based URL shortener with click analytics - built to understand how servi
 ## Tech Stack
 
 - **Backend:** Flask 3, SQLAlchemy
+
+## Screenshots
+
+![Homepage](docs/screenshot-home.png)
+
+![Feature](docs/screenshot-feature.png)
 - **Database:** SQLite
 - **Frontend:** Vanilla HTML/CSS/JS + Chart.js
 - **Deployment:** Render
@@ -25,6 +43,12 @@ A Flask-based URL shortener with click analytics - built to understand how servi
 ## Setup
 
 ```bash
+
+## Screenshots
+
+![Homepage](docs/screenshot-home.png)
+
+![Feature](docs/screenshot-feature.png)
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
@@ -36,6 +60,12 @@ Then visit http://127.0.0.1:5000
 ## What I Learned
 
 - URL-safe code generation with Python's secrets module
+
+## Screenshots
+
+![Homepage](docs/screenshot-home.png)
+
+![Feature](docs/screenshot-feature.png)
 - Logging real click data with SQLAlchemy relationships
 - Designing a clean REST API
 - Structuring a Flask app for growth
@@ -44,3 +74,9 @@ Then visit http://127.0.0.1:5000
 ## License
 
 MIT
+
+## Screenshots
+
+![Homepage](docs/screenshot-home.png)
+
+![Feature](docs/screenshot-feature.png)
