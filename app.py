@@ -1,4 +1,4 @@
-﻿from flask import Flask, render_template, request, redirect, jsonify, abort
+from flask import Flask, render_template, request, redirect, jsonify, abort
 from models import db, Link, Click
 from utils.shortener import generate_short_code
 from datetime import datetime, timedelta
