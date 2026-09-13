@@ -1,5 +1,8 @@
 # URL Shortener with Analytics
 
+![Python](https://img.shields.io/badge/python-3.11-blue) ![Flask](https://img.shields.io/badge/flask-3.0-black) ![SQLAlchemy](https://img.shields.io/badge/sqlalchemy-ORM-red)
+
+
 A Flask-based URL shortener with click analytics - built to understand how services like Bitly work under the hood.
 
 ## Screenshots
